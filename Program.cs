@@ -10,8 +10,11 @@ namespace Baldesamo_Franco_ASS3
             try
             {
                 //length validation
-                int cNameLimit = 2;
-                int cAddress = 3;
+                int cNameLimit = 1;
+                int cAddress = 1;
+                int cTel = 1;
+                int cQuan = 100;
+                
                 bool customValidation = false;
 
                 //get the userinfos
@@ -43,8 +46,21 @@ namespace Baldesamo_Franco_ASS3
                 {
                     Console.Write("Telephone number:");
                     custom1.tel_Num = Int64.Parse(Console.ReadLine());//not yet done
-                    customValidation = Class1.ClassValidInt(custom1.tel_Num);
-                }  
+                    customValidation = Class1.ClassValidInt(custom1.tel_Num, cTel);
+                }
+                sw.WriteLine("Telephone num: " + custom1.tel_Num);
+
+                customValidation = false;
+                while (customValidation == false)
+                {
+                    Console.Write("Quantity (1-100): ");
+                    custom1.quantity = byte.Parse(Console.ReadLine());
+                    customValidation = Class1.ClassValidInt(custom1.quantity, cQuan);
+
+
+
+                }
+                
                 sw.Close();
                 fs.Close();
 

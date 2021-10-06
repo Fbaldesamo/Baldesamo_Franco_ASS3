@@ -5,7 +5,7 @@
         public string name;
         public string address;
         public long tel_Num;
-        public int quanty;
+        public byte quantity;
 
         public static bool ClassValid(string a, int b)
         {
@@ -21,11 +21,30 @@
             }
         }
 
-        public static bool ClassValidInt(long a)
+        public static bool ClassValidInt(long a,int b)
         {
-            if (a.ToString().Length <= 11)
+            if (a.ToString().Length <= b)
             {
                 return true;
+            }
+            else if (b == 100)
+            {
+                if( a <= b)
+                {
+                    return true;
+
+
+
+                }
+                else
+                {
+                    return false;
+                }
+
+                
+
+
+
             }
             else
             {
