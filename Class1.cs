@@ -23,10 +23,11 @@
 
         public static bool ClassValidInt(long a,int b)
         {
-            if (a.ToString().Length <= b)
+            if (a.ToString().Length == b)
             {
                 return true;
             }
+            
             else if (b == 100)
             {
                 if( a <= b)

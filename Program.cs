@@ -10,9 +10,9 @@ namespace Baldesamo_Franco_ASS3
             try
             {
                 //length validation
-                int cNameLimit = 1;
-                int cAddress = 1;
-                int cTel = 1;
+                int cNameLimit = 50;
+                int cAddress = 100;
+                int cTel = 11;
                 int cQuan = 100;
                 
                 bool customValidation = false;
